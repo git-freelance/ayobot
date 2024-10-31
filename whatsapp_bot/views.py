@@ -8,10 +8,15 @@ import json
 import openai
 from .models import WhatsAppConversation
 from typing import Optional, List, Dict, Any
+from dotenv import load_dotenv
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+load_dotenv()
+
 
 # Configuration (move to environment variables in production)
 TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
